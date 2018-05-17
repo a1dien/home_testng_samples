@@ -1,5 +1,6 @@
 package learn.testng.task3;
 
+import org.junit.Assert;
 import org.testng.annotations.BeforeSuite;
 import org.testng.asserts.SoftAssert;
 
@@ -18,6 +19,10 @@ public class TestCreateTempDir {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
+        assert (!path.equals(null));
+        Assert.assertTrue(!path.equals(null));
+        SoftAssert s = new SoftAssert();
+        s.assertEquals(!path.equals(null),!equals(null));
+        s.assertAll();
     }
 }
