@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="CreateTempFiles" verbose="1">
+<test name="Test1">
+    <groups>
+        <run>
+            <include name="positive"></include>
+            <include name="negative"></include>
+        </run>
+        <dependencies>
+            <!--
+            <group name="positive" depends-on="negative"></group>
+            -->
+            <group name="negative" depends-on="positive"></group>
+        </dependencies>
+    </groups>
+    <packages>
+        <package name="learn.testng.task3"></package>
+    </packages>
+</test>
+</suite>
